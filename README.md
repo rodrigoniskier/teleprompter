@@ -16,7 +16,7 @@ Foi pensado para funcionar como uma ferramenta rápida para gravação de vídeo
 
 **Tecnologias.** JavaScript, HTML, CSS, PWA (manifest e Service Worker), MediaRecorder API, Wake Lock API.
 
-**Qualidade e evidências.** Sem backend: o roteiro fica apenas no `localStorage` do navegador. Este repositório não tem testes automatizados.
+**Qualidade e evidências.** Sem backend: o roteiro fica apenas no `localStorage` do navegador. Não há testes automatizados; o CI verifica a sintaxe dos scripts JavaScript e a validade dos arquivos JSON. Licença MIT.
 
 ## Recursos
 

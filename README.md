@@ -6,6 +6,18 @@ Este projeto é um **teleprompter mobile-first** construído apenas com tecnolog
 
 Foi pensado para funcionar como uma ferramenta rápida para gravação de vídeos pelo celular.
 
+## Problema, público e resultado
+
+**Problema.** Gravar um vídeo lendo um roteiro exige alternar entre aplicativos ou decorar o texto.
+
+**Para quem.** Quem grava vídeos pelo celular, como professores e criadores de conteúdo, e precisa ler o roteiro enquanto olha para a câmera.
+
+**O que entrega.** Câmera, roteiro rolando sobre a imagem, controle de velocidade e de fonte, espelhamento, tela cheia e gravação no navegador com download local do vídeo.
+
+**Tecnologias.** JavaScript, HTML, CSS, PWA (manifest e Service Worker), MediaRecorder API, Wake Lock API.
+
+**Qualidade e evidências.** Sem backend: o roteiro fica apenas no `localStorage` do navegador. Este repositório não tem testes automatizados.
+
 ## Recursos
 
 - câmera frontal ou traseira;

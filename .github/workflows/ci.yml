@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sintaxe dos scripts JavaScript
+        run: |
+          set -e
+          for f in $(find . -name '*.js' -not -path './node_modules/*' -not -path './.git/*'); do
+            node --check "$f"
+          done
+      - name: JSON válidos (manifest e configuração)
+        run: |
+          set -e
+          for f in $(find . \( -name '*.json' -o -name '*.webmanifest' \) -not -path './node_modules/*' -not -path './.git/*'); do
+            node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$f"
+          done
